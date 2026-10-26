@@ -46,7 +46,7 @@ sudo dnf install nasm binutils
 
 1. **Assemble the source code:**
    ```bash
-   nasm -f elf64 port_scanner.asm -o port_scanner.o
+   nasm -f elf64 asmSyn.asm -o port_scanner.o
    ```
 
 2. **Link the object file:**
@@ -61,16 +61,19 @@ sudo dnf install nasm binutils
 
 ## Usage
 
-Run the port scanner with a target IP address:
+Run the port scanner:
 
 ```bash
-./port_scanner <target_ip>
+./port_scanner
 ```
 
 ### Example
 
 ```bash
-./port_scanner 192.168.1.1
+./port_scanner
+IP:
+start port:
+end port:
 ```
 
 The scanner will attempt to connect to ports on the specified IP address and report which ports are open or closed.
@@ -80,14 +83,14 @@ The scanner will attempt to connect to ports on the specified IP address and rep
 - Requires root/sudo privileges for raw socket operations on most Linux systems
 - Run with `sudo` if needed:
   ```bash
-  sudo ./port_scanner 192.168.1.1
+  sudo ./port_scanner
   ```
 
 ## Project Structure
 
 ```
 Assembly_PortScanner/
-├── port_scanner.asm    # Main assembly source code
+├── asmSyn.asm    # Main assembly source code
 └── README.md           # Project documentation
 ```
 
